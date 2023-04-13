@@ -6,11 +6,11 @@ WishList | {{ parent() }}
 
 {% block main %}
     <h2>All wishes !</h2>
-    <!--Pour l'instant chaque souhait amene au meme lien-->
-    <ul>
-        <li><a href="details.html.twig"> Sauter en parachute</a></li>
-        <li><a href="details.html.twig">Avoir une tortue</a></li>
-        <li><a href="details.html.twig">Voir le Dia de Los Muertos à Mexico</a></li>
-
-    </ul>
+    <section class="wish-list">
+        <ul>
+            {% for wish in wishes %}
+                <li><a href="{{ path('wish_details', {'id' : wish.id}) }}">{{ wish.title }}</a> </li>
+            {% endfor %}
+        </ul>
+    </section>
 {% endblock %}
