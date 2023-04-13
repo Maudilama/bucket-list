@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: aliceblue;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+
+header {
+    background-color: #A5A58D;
+    padding: 1rem;
+}
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header nav a:hover{
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    background-color: #FFF1E6;
+}
+main h2 {
+    margin-top: 0;
+}
+
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #EDDCD2;
+}
+
+.header-logo {
+    font-size: 3rem;
+    font-weight: normal;
+}
+.header-logo img {
+    max-width: 42px;
+    margin-right: 5px;
+}
+
+.team-members article {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.team-members article img {
+    width: 210px;
+    border-radius: 50%;
+    margin: auto;
+}
+@media screen and (min-width: 680px){
+    .team-members article {
+        flex-direction: row;
+    }
+    .team-members article:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    .team-members article img {
+        margin-right: 20px;
+    }
+    .team-members article:nth-child(odd) img {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+}

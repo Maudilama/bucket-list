@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+WishList | {{ parent() }}
+{% endblock %}
+
+{% block main %}
+    <h2>All wishes !</h2>
+    <!--Pour l'instant chaque souhait amene au meme lien-->
+    <ul>
+        <li><a href="details.html.twig"> Sauter en parachute</a></li>
+        <li><a href="details.html.twig">Avoir une tortue</a></li>
+        <li><a href="details.html.twig">Voir le Dia de Los Muertos à Mexico</a></li>
+
+    </ul>
+{% endblock %}
