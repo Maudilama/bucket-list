@@ -90,11 +90,12 @@ footer {
 label {
     display: block;
 }
-input, textarea {
+input, textarea, select {
     margin-bottom: 1rem;
     box-sizing: border-box;
     width: 550px;
     max-width: 50%;
+    padding: 0.2rem 0.5rem;
 }
 
 .flash {
