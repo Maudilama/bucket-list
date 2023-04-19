@@ -4,8 +4,10 @@ namespace App\Form;
 
 use App\Entity\Category;
 use App\Entity\Wish;
+use App\Util\Censure;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,8 +17,7 @@ class WishType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('description')
-            ->add('author')
+            ->add('description', TextType::class)
             ->add('category', EntityType::class, [
                 'label'=>'Category',
                 'class'=>Category::class,
